@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+
+  <!-- Vue.js and Vue Router scripts from CDN -->
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/vue-router@4"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Router view will be rendered here -->
+    <router-view></router-view>
+  </div>
+
+  <!-- Templates defined outside of the Vue instance -->
+  <template id="home-template">
+    <div class="container">
+      <div class="content">
+      </div>
+    </div>
+  </template>
+
+  <template id="about-template">
+      <div class="content">
+        About Page Content
+      </div>
+    </div>
+  </template>
+  
+
+  <script>
+    const { createApp } = Vue;
+    const { createRouter, createWebHashHistory } = VueRouter;
+
+    // Define components for routing
+    const Home = {
+      template: '#home-template' // Reference template with id="home-template"
+    };
+
+    const About = {
+      template: '#about-template' // Reference template with id="about-template"
+    };
+
+    // Create a router instance
+    const router = createRouter({
+      history: createWebHashHistory(),
+      routes: [
+        { path: '/', component: Home },
+        { path: '/about', component: About }
+      ]
+    });
+
+    // Create a Vue app instance
+    const app = createApp({});
+    app.use(router); // Use the router instance
+    app.mount('#app');
+  </script>
+
+</body>
+
+</html>

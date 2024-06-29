@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FODPAC Login</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('/DNL/assets/img/grocery.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .content {
+      background-color: transparent;
+      width: 100%;
+      padding: 20px;
+      border-radius: 30px;
+      box-shadow: 0 0 10px white, 0 0 15px black, 0 0 20px white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 0.5px solid black;
+      backdrop-filter: blur(8px);
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0%);
+      }
+    }
+
+    .content h1 {
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    .content form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+    }
+
+    .content input {
+      width: 80%;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid white;
+      margin: 20px 0;
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+      background-color: transparent;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .content input:hover {
+      border: none;
+    }
+
+    .content .btn {
+      margin: 10px 0;
+      font-family: 'Playfair Display', serif;
+      background-color: transparent;
+      border: 1px solid black;
+      border-radius: 10px;
+      transition: background-color 1s ease;
+    }
+
+    .content .btn:hover {
+      background-color: black;
+      color: red;
+    }
+
+    .content p,
+    .content a {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    #p1 {
+      display: inline-flex;
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    #a1 {
+      display: inline-flex;
+      margin-left: 5px;
+      font-family: 'Playfair Display', serif;
+      color: blue;
+      transition: color 0.5s ease;
+    }
+
+    #a1:hover {
+      color: black;
+    }
+
+    #p2,
+    #p3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    .content i {
+      font-size: 24px;
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+      transition: color 0.5s ease;
+    }
+
+    .content i:hover {
+      color: black;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .content {
+        width: 90%;
+        height: auto;
+        margin-top: 30px;
+        backdrop-filter: blur(5px);
+      }
+
+      .content input {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class='container'>
+    <div class="content">
+      <h1>FODPAC LOGIN</h1>
+      <form id="lan" onsubmit="shop(event)">
+        <input class="input" aria-required="true" type="email" placeholder="Email">
+        <input class="password" aria-required="true" type="password" placeholder="Password">
+        <button class='btn btn-primary' type="submit">Log in</button>
+        <p id="p1">Don't have an account?</p><a id="a1" href="#">Register</a>
+        <p id="p2">Or</p>
+        <p id="p3">Sign in with</p>
+        <i class="bi bi-google"></i>
+      </form>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+</body>
+<script>
+  function shop(event){
+    event.preventDefault();
+    window.location.href = "next/index.html";
+  }
+</script>
+
+</html>

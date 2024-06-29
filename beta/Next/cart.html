@@ -1,0 +1,272 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   <link rel="stylesheet" href="res/bootstrap@5.2.0.min.css">
+    <link rel="stylesheet" href="res/chartist.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <!-- Favicons -->
+
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+   <!-- Owl Carousel CSS (assuming you are using Owl Carousel) -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+</head>
+
+<style>
+  
+  .navbar-brand {
+    font-family: 'playfair Display', serif;
+    text-shadow: 2px 2px 3px;
+    
+  }
+  
+  .icons{
+  position:fixed;
+  right:0;
+  margin-right: 20%;
+  overflow: -moz-hidden-unscrollable;
+}
+.icons i {
+  margin-right: 10px;
+  font-size: 14pt;
+  color:grey;
+}
+
+#mage{
+  height:60px;
+  margin-top: 10px;
+  width:100%;
+}
+h1{
+  margin-top:20px;
+  font-family: 'playfair Display',serif;
+  text-align:center;
+  text-shadow: 2px 2px 3px;
+  color: darkgoldenrod;
+}
+.table tbody td{
+  font-family: 'playfair Display';
+ }
+.table {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .table thead th {
+      background-color: #f39c12;
+      color: #fff;
+      border:none;
+    }
+    .table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    .table input[type="number"] {
+      width: 60px;
+      text-align: center;
+    }
+    .table .btn {
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+    .table .btn-danger {
+      background-color: #e74c3c;
+      border-color: #e74c3c;
+    }
+    .table .btn-danger:hover {
+      background-color: #c0392b;
+      border-color: #c0392b;
+    }
+    .table-responsive{
+      box-shadow: 4px 6px 40px black;
+      border-radius: 20px;
+      
+    }
+    @media only screen and (min-width:542px){
+          .check{
+        margin-left: 38%;
+        margin-top: 20px;
+        box-shadow: 4px 6px 40px black;
+        width:25%;
+      }
+      .check1{
+        margin-left: 38%;
+        margin-top: 20px;
+        box-shadow: 4px 6px 40px black;
+        width:25%;
+      }
+    }
+    @media (max-width: 768px) {
+      .table-responsive {
+        overflow-x: auto;
+      }
+      .check{
+        margin-left: 35%;
+        margin-top: 20px;
+        box-shadow: 4px 6px 40px black;
+      }
+      .check1{
+        margin-left: 36%;
+        margin-top: 20px;
+        box-shadow: 4px 6px 40px black;
+        width:25%;
+      }
+    }
+</style>
+
+
+<body>
+  
+  
+  <!---navBar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">FODPAC</a>
+    <div class="icons">
+      <i class="bi bi-bell-fill"></i>
+      <i class="bi bi-cart-fill"></i>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!--endNavBar-->
+  <img id = "mage" src = "src/img/cart-page-header-img.jpg">
+  
+  <section>
+    <h1>Shopping cart</h1>
+  </section>
+  
+  
+<div class="container mt-5">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Product A</td>
+            <td>
+              <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button">-</button>
+                <input type="number" class="form-control text-center" value="1">
+                <button class="btn btn-outline-secondary" type="button">+</button>
+              </div>
+            </td>
+            <td>N1000.00</td>
+            <td>N1000.00</td>
+            <td>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Product B</td>
+            <td>
+              <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button">-</button>
+                <input type="number" class="form-control text-center" value="1">
+                <button class="btn btn-outline-secondary" type="button">+</button>
+              </div>
+            </td>
+            <td>N1000.00</td>
+            <td>N1000.00</td>
+            <td>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Product C</td>
+            <td>
+              <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button">-</button>
+                <input type="number" class="form-control text-center" value="1">
+                <button class="btn btn-outline-secondary" type="button">+</button>
+              </div>
+            </td>
+            <td>N1000.00</td>
+            <td>N1000.00</td>
+            <td>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <section>
+    <button class = "check btn btn-primary">Check Out</button>
+      <button class = "check1 btn btn-primary">Back</button>
+  </section>
+    <!--imports-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
