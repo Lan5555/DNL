@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<p id = 'result'></p>
+</body>
+<script>
+  let result = document.getElementById('result');
+  if(localStorage.getItem('selectedCardId') == "card1"){
+    result.innerHTML = "Test1";
+  }else if (localStorage.getItem('selectedCardId') == "card2") {
+    result.innerHTML = "Test2";
+  }else if (localStorage.getItem('selectedCardId') == "card3") {
+    result.innerHTML = "Test3";
+  }else if (localStorage.getItem('selectedCardId') == "card4") {
+    result.innerHTML = "Test4";
+  }else if (localStorage.getItem('selectedCardId') == "card5") {
+    result.innerHTML = "Test5";
+  }else{
+    
+  }
+</script>
+
+</html>
