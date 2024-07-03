@@ -1,4 +1,6 @@
-
+.content{
+  transition: margin-left 0.3s ease;
+}
 
 .navbar-brand{
   font-family: 'playfair Display',serif;
@@ -18,6 +20,18 @@
   
   
 }
+.card-custom{
+  margin-bottom: 20px;
+  box-shadow:  0 0 16px white, 0 0 9px grey, 0 0 44px white;
+  border-radius: 30px;
+  border: none;
+}
+
+#imageDisplay{
+ box-shadow:  0 0 16px white, 0 0 9px grey, 0 0 44px white;
+ border-radius: 30px;
+}
+
 
 h1,p{
   margin-top:20px;
@@ -27,15 +41,13 @@ h1,p{
   color: darkgoldenrod;
 }
 .icons{
-  position:fixed;
-  right:0;
-  margin-right: 20%;
+  margin-left: 50%;
   overflow: -moz-hidden-unscrollable;
 }
 .icons i {
   margin-right: 10px;
   font-size: 14pt;
-  color:grey;
+  color:rgb(26, 19, 19);
 }
 .form-control{
   border-radius: 10px;
@@ -109,6 +121,18 @@ h1,p{
   height:50px;
   width: 40%;
 }
+.bi-gear:hover{
+  color:red;
+}
+.switch{
+  display: block;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.switch .btn-outline-success{
+  display: inline-block;
+  margin-right: 20px;
+}
 
 @media only screen and (min-width:542px){
 .tt {
@@ -119,12 +143,66 @@ h1,p{
   margin-top: 10px;
   padding: 20px;
 }
+
+#settings{
+  width:40%;
+  height:100%;
+  background-color: black;
+  z-index:6;
+  position: fixed;
+  left:-600px;
+  top:0;
+  
+  transition: left 0.3s ease;
+}
+
+.switch .switcher{
+  display:none;
+}
 }
 
 @media (min-width: 992px) {
     .hero-header,
     .page-header {
         margin-top: 152px !important;
+    }
+
+    .tt {
+      display: block;
+      margin-right: 6px;
+      border-radius: 10px;
+      margin-left: 40%;
+      margin-top: 10px;
+      padding: 20px;
+    }
+    .searchBtn{
+      margin-left: 60%;
+      display: none;
+    }
+    .searchBtn2{
+      display: none;
+    }
+
+    .carousel-inner2 {
+    
+      width: 100%;
+      margin-left: 14.5px;
+      border-radius: 10px;
+    }
+
+    #settings{
+      width:40%;
+      height:100%;
+      background-color: black;
+      z-index:6;
+      position: fixed;
+      left:-850px;
+      top:0;
+      
+      transition: left 0.3s ease;
+    }
+    .switch .switcher{
+      display: none;
     }
 }
 
@@ -159,4 +237,35 @@ h1,p{
   
     border-radius: 10px;
   }
+
+  #settings{
+    width:70%;
+    height:100%;
+    background-color: black;
+    z-index:6;
+    position: fixed;
+    left:-600px;
+    top:0;
+    
+    transition: left 0.3s ease;
+  }
+
+  .switch{
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .switch .btn-outline-success{
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .switch .switcher{
+    display: inline-block;
+    margin-left: 35%;
+  }
+  .switch .switcher i{
+    font-size: 17pt;
+  }
 }
+

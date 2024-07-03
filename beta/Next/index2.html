@@ -37,13 +37,11 @@
   
   
   
+
 <!---navBar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">FODPAC</a>
-  <div class = "icons">
-      <i class="bi bi-bell-fill"></i>
-      <i class="bi bi-cart-fill"></i>
-  </div>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -71,13 +69,23 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!--notification-->
+  <div class = "icons">
+    <i class="bi bi-bell-fill"></i>
+    <i class="bi bi-cart-fill"></i>
+    <i class="bi bi-gear" onclick="view()"></i>
+  </div>
+    <!--notification-->
+    <form class="form-inline my-2 my-lg-0 searchBtn">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0 searchBtn2" type="submit">Search</button>
     </form>
   </div>
 </nav>
 <!--endNavBar-->
+
+<div class = "content">
+
 
 <h1 class = "mb-3">Explore</h1>
 <p>A wide range of products</p>
@@ -170,8 +178,8 @@
 <section>
     <div class="container mt-5">
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary  my-2 my-sm-0 btn1" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><br>
+        <button class="btn btn-primary  my-2 my-sm-0 btn1" type="submit"><i class = "bi bi-search"></i> Search</button>
       </form>
     </div>
 </section>
@@ -189,7 +197,7 @@
             <h1 class="card-title">Berries</h1>
             <p id = "text" class="card-text">Explore</p>
             <h1>Price:N500</h1>
-            <button id = "btn2" class = "btn btn-primary"><i class = "bi bi-cart-fill"></i>Add to cart</button>
+            <button id = "btn2" class = "btn btn-primary">Add to cart <i class = "bi bi-cart-fill"></i></button>
           </div>
         </div>
       </div>
@@ -201,7 +209,7 @@
               <h1 class="card-title">banana</h1>
               <p id="text" class="card-text">Explore</p>
               <h1>Price:N1500</h1>
-              <button id="btn2" class="btn btn-primary"><i class="bi bi-cart-fill" ></i>Add to cart</button>
+              <button id="btn2" class="btn btn-primary">Add to cart <i class="bi bi-cart-fill" ></i></button>
             </div>
           </div>
         </div>
@@ -211,78 +219,87 @@
 </section>
 
 <!--categories-->
-<section>
+<!-- <section>
   <h1>Categories</h1>
   <div class = "container-fluid">
     <div class = "row flex-nowrap overflow-auto">
-      <div class = "col-md-4 mb-3">
+      <div class = "col-md-4 mb-3 col-lg-4">
         <span><button class = "tt btn btn-primary active">Groceries</button></span>
        <span><button class = "tt btn btn-primary">Synthetic</button></span>
        <span><button class = "tt btn btn-primary">Fresh produce</button></span>
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+<nav class = "navbar navbar-expand-lg navbar-custom bg-light">
+  <a class ="navbar-brand" href ="#">Categories</a>
+  <button class = "navbar-toggler" type = "button" data-toggle="collapse" data-target="#navbarCategories" aria-controls="navbarCategories" aria-expanded="false" aria-label="Toggle navigation">
+    <i class = "bi bi-box"></i>
+  </button>
+  <div class ="collapse navbar-collapse" id = "navbarCategories">
+    <ul class = "navbar-nav mr-auto">
+      <li class = "nav-item">
+        <a class ="nav-link" href = "#">
+          Groceries
+        </a>
+      </li>
+      <li class = "nav-item">
+        <a class ="nav-link" href = "#">
+        Processed
+        </a>
+      </li>
+      <li class = "nav-item">
+        <a class ="nav-link" href = "#">
+          Fresh produce
+        </a>
+      </li>
+      <li class = "nav-item">
+        <a class ="nav-link" href = "#">
+          Synthetic
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <!--categoriesEnd-->
+    <!--products-->
+    <div class = "switch">
+      <button class = "btn btn-outline-success active">Top Selling</button>
+      <button class = "btn btn-outline-success">New</button>
+      <div class = "switcher">
+        <i class = "bi bi-list" onclick = "list1()"></i>
+        <i class = "bi bi-grid" onclick = "grid1()"></i>
+      </div>
+    </div>
+    
 
-          <!-- Vesitable Shop Start-->
-        <div class="container-fluid vesitable py-5">
-            <div class="container py-5">
-                <h1 class="mb-0">Fresh Organic Vegetables</h1>
-                
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="src/img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Parsely</h4>
-                            <p>Freshly packed parsely</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">N3000 / kg</p>
-                                <a href="cart.html" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="bi bi-cart-fill me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                      <br>
-                                      <div class="border border-primary rounded position-relative vesitable-item">
-                                        <div class="vesitable-img">
-                                          <img src="src/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                                        <div class="p-4 rounded-bottom">
-                                          <h4>Grapes</h4>
-                                          <p>High-quality grapes </p>
-                                          <div class="d-flex justify-content-between flex-lg-wrap">
-                                            <p class="text-dark fs-5 fw-bold mb-0">N3000/ kg</p>
-                                            <a href="cart.html" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="bi bi-cart-fill me-2 text-primary"></i> Add to cart</a>
-                                          </div>
-                                        </div>
-                                      </div>
-                    
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                      <div class="vesitable-img">
-                        <img src="src/img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
-                      </div>
-                      <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                      <div class="p-4 rounded-bottom">
-                        <h4>Banana</h4>
-                        <p>High-quality bananas</p>
-                        <div class="d-flex justify-content-between flex-lg-wrap">
-                          <p class="text-dark fs-5 fw-bold mb-0">N3000/ kg</p>
-                          <a href="cart.html" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="bi bi-cart-fill me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                      </div>
-                    </div>                  
+    <div class = "container mt-4">
+      <div class = "row" id = "cards">
+        <!-- <div class = "col-12 col-md-6 col-lg-4 col-xl-4">
+
+          <div class = "card card-custom">
+            <img src = "src/img/fruite-item-1.jpg" class = "card-img-top" alt="photo" id = "imageDisplay">
+            <div class = "card-body">
+              <h1 class = "card-title">Test</h1>
+              <p class = "card-text">This is a test</p>
+              <p>Price: NGN 200</p>
+              <button class = "btn btn-primary">Add to cart <i class = "bi bi-cart"></i></button>
             </div>
-        </div>
-        </div>
-        <!-- Vesitable Shop End -->
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+        <!-- productEnd-->
 
 <!--SwipableProducts-->
+</div>
 
+<div id = "settings">
 
+</div>
 
 
 
