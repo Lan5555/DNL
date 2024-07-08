@@ -43,13 +43,11 @@ h1,p{
 .icons{
   margin-left: 50%;
   overflow: -moz-hidden-unscrollable;
-  
 }
 .icons i {
   margin-right: 10px;
   font-size: 14pt;
   color:rgb(26, 19, 19);
-  display: inline-block;
 }
 .form-control{
   border-radius: 10px;
@@ -264,23 +262,10 @@ h1,p{
 
   .switch .switcher{
     display: inline-block;
-    margin-left: 15%;
+    margin-left: 35%;
   }
   .switch .switcher i{
     font-size: 17pt;
-    margin-right: 10px;
   }
-  .card-custom{
-  margin-bottom: 20px;
-  box-shadow:  0 0 16px white, 0 0 9px grey, 0 0 44px white;
-  border-radius: 1px;
-  border: none;
-}
-
-#imageDisplay{
- box-shadow:  0 0 16px white, 0 0 9px grey, 0 0 44px white;
- border-radius: 1px;
-}
-
 }
 
